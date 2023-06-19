@@ -173,7 +173,7 @@ export default function LandingPage() {
                                     fontSize: ".8rem"
                                 }}
                             >sell</span>
-                            SAVE ${((product.price / 75) - (product.price / 100)).toFixed(2)}</div>
+                            SAVE ${(product.price / 75 - product.price / 100).toFixed(2)}</div>
                     </div>
                     <a
                         href="https://buy.stripe.com/9AQ8yQcWJ5kF15S8wx"
