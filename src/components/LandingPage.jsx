@@ -23,7 +23,7 @@ export default function LandingPage() {
     const [activeTabs, setActiveTabs] = useState(product.tabs.reduce((acc, curr) => ({ ...acc, [curr.name]: false })))
 
     return (
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={{ display: "flex", flexDirection: "column", marginTop: desktop ? "1em" : "" }}>
             {!desktop && <img style={{ width: "100%" }} src={banner} alt="sadsd" />}
 
             <Page style={{ flexDirection: desktop ? "row" : "column" }}>
@@ -50,6 +50,7 @@ export default function LandingPage() {
                     display: "flex",
                     flexDirection: "column",
                     gap: ".7em",
+                    minWidth: desktop ? "50%" : "",
                     marginTop: desktop ? "" : "3.1em"
                 }}>
                     <div style={{
