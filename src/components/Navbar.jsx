@@ -8,6 +8,7 @@ import { useMediaQuery } from "../hooks/useMediaQuery"
 import { ProductContext } from "../contexts/ProductContext"
 
 import Page from "./templates/Page"
+import Sidebar from "./Sidebar"
 
 export default function Navbar() {
     const desktop = useMediaQuery("(min-width: 768px)")
@@ -43,35 +44,7 @@ export default function Navbar() {
                 style={{ zIndex: 2, fontSize: "1.8rem" }}
             >menu</button>}
 
-            <div style={
-                desktop ? {} : {
-                    touchAction: "none",
-                    zIndex: 1,
-                    position: "fixed",
-                    right: sidebarVisible ? 0 : "-100%",
-                    transition: "right .2s",
-                    top: 0,
-                    width: "90%",
-                    height: "100%",
-                    background: "rgb(245, 245, 245)",
-                    boxShadow: sidebarVisible ? "0px 0px 100vw 0 black" : "",
-                    display: "flex",
-                    flexDirection: "column"
-                }
-            }>
-                {!desktop && <button onClick={() => setSidebarVisible(false)} style={{ fontSize: "2rem", padding: "1rem" }} className="material-symbols-rounded">close</button>}
-                <div style={{
-                    display: "flex",
-                    gap: desktop ? "2em" : "",
-                    flexDirection: desktop ? "" : "column"
-                }}>
-                    <a style={desktop ? { fontWeight: 600, fontSize: "1.1rem" } : { padding: "1.4rem", borderBottom: "1px solid rgb(200, 200, 200)", fontWeight: 600, fontSize: "1.2rem", textAlign: "center" }} href="/refunds">Refund Policy</a>
-                    <a style={desktop ? { fontWeight: 600, fontSize: "1.1rem" } : { padding: "1.4rem", borderBottom: "1px solid rgb(200, 200, 200)", fontWeight: 600, fontSize: "1.2rem", textAlign: "center" }} href="/privacy">Privacy Policy</a>
-                    <a style={desktop ? { fontWeight: 600, fontSize: "1.1rem" } : { padding: "1.4rem", borderBottom: "1px solid rgb(200, 200, 200)", fontWeight: 600, fontSize: "1.2rem", textAlign: "center" }} href="https://tiktok.com/@ambrosica.com">TikTok</a>
-                    <a style={desktop ? { fontWeight: 600, fontSize: "1.1rem" } : { padding: "1.4rem", borderBottom: "1px solid rgb(200, 200, 200)", fontWeight: 600, fontSize: "1.2rem", textAlign: "center" }} href="https://instagram.com/ambrosica_official">Instagram</a>
-                    <a style={desktop ? { fontWeight: 600, fontSize: "1.1rem" } : { padding: "1.4rem", borderBottom: "1px solid rgb(200, 200, 200)", fontWeight: 600, fontSize: "1.2rem", textAlign: "center" }} href="mailto:info@ambrosia.com">Contact</a>
-                </div>
-            </div>
+            <Sidebar sidebarVisible={sidebarVisible} setSidebarVisible={setSidebarVisible} />
         </Page>
     )
 }

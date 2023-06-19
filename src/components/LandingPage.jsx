@@ -1,14 +1,14 @@
 import poweredByStripe from "../assets/poweredByStripePurple.svg"
 
-import Slider from "react-touch-drag-slider"
-
 import { useContext, useState } from "react"
 
 import { ProductContext } from "../contexts/ProductContext"
 
 import Page from "./templates/Page"
+import Banner from "./Banner"
+import Reviews from "./Reviews"
+import Footer from "./Footer"
 
-import banner from "../assets/banner.png"
 import { useMediaQuery } from "../hooks/useMediaQuery"
 
 export default function LandingPage() {
@@ -24,7 +24,7 @@ export default function LandingPage() {
 
     return (
         <div style={{ display: "flex", flexDirection: "column", marginTop: desktop ? "1em" : "" }}>
-            {!desktop && <img style={{ width: "100%" }} src={banner} alt="sadsd" />}
+            <Banner />
 
             <Page style={{ flexDirection: desktop ? "row" : "column" }}>
                 {!desktop && <>
@@ -211,10 +211,10 @@ export default function LandingPage() {
                         marginTop: ".5em",
                         lineHeight: "1.4em"
                     }}>{product.description}</div>
-                    <div style={{ marginTop: "3em", display: "flex", flexDirection: "column", gap: "1em" }}>
+                    <div style={{ marginTop: "3em", display: "flex", flexDirection: "column" }}>
                         {product.tabs?.map((tab, tabIdx) => <div
                             key={tab.name}
-                            style={{ display: "flex", flexDirection: "column", ...(tabIdx === 0 ? { borderBlock: "1px solid rgb(200, 200, 200)" } : { borderBottom: "1px solid rgb(200, 200, 200)" }) }}
+                            style={{ display: "flex", flexDirection: "column", borderBottom: "1px solid rgb(200, 200, 200)", borderTop: tabIdx === 0 ? "1px solid rgb(200, 200, 200)" : "" }}
                         >
                             <button
                                 onClick={() => setActiveTabs(prev => ({ ...prev, [tab.name]: !prev[tab.name] }))}
@@ -230,7 +230,7 @@ export default function LandingPage() {
                                 <div>{tab.name}</div>
                                 <div className="material-symbols-rounded">add</div>
                             </button>
-                            {activeTabs[tab.name] && <div style={{ display: "flex", gap: ".5em" }}>
+                            {activeTabs[tab.name] && <div style={{ display: "flex", gap: ".5em", paddingBottom: ".7em" }}>
                                 <div style={{ background: "var(--light-blue)", width: "3px", borderRadius: "2em" }}></div>
                                 <div style={{ paddingBlock: ".7em", textAlign: "center", flex: 1 }}>{tab.content}</div>
                             </div>}
@@ -245,53 +245,11 @@ export default function LandingPage() {
                             objectFit: "cover"
                         }}
                     />}
-                    {product.reviews?.length && <>
-                        <div style={{ fontSize: "1.8rem", marginTop: "5em", fontWeight: 600, textAlign: "center" }}>Don't just take our word for it</div>
-                        <div style={{ textAlign: "center", fontSize: "1.2rem", fontWeight: 500, marginTop: ".6em", color: "rgb(0, 0, 0)" }}>Read from the Buyers!</div>
-                        <Slider>
-                            {product.reviews?.map(review => (<div
-                                key={review.reviewer}
-                                style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "3em" }}
-                            >
-                                <div
-                                    className="material-symbols-rounded"
-                                    style={{
-                                        fontSize: "3.5rem",
-                                        padding: ".3em",
-                                        fontWeight: 600,
-                                        color: "white",
-                                        background: "var(--light-blue)",
-                                        width: "max-content",
-                                        borderRadius: ".2em"
-                                    }}
-                                >format_quote</div>
-                                <div style={{ fontSize: "1.65rem", fontWeight: 800, marginTop: "5rem" }}>{review.title}</div>
-                                <div style={{ fontSize: "1.1rem", color: "rgb(50, 50, 50)", fontWeight: 600, textAlign: "center", marginTop: "1em" }}>{review.description}</div>
-                                <div style={{ color: "rgb(50, 50, 50)", fontWeight: 500, fontSize: "1.1rem", marginTop: "5rem", display: "flex", alignItems: "center", gap: ".3em" }}>
-                                    ~{review.reviewer}
-                                    <div style={{ display: "flex", alignItems: "center" }}>
-                                        {Array(review.rating).fill().map((_, keyIdx) => <div
-                                            key={keyIdx}
-                                            className="material-symbols-rounded star"
-                                            style={{ fontSize: "1.3rem", color: "rgb(230, 165, 0)" }}
-                                        >star</div>)}
-                                    </div>
-                                </div>
-                            </div>))}
-                        </Slider>
-                    </>}
+                    <Reviews product={product} />
                 </div>
             </Page>
 
-            <Page style={{ marginTop: "2em", paddingBlock: "2em", background: "black", color: "white", gap: "1.2em" }}>
-                <div style={{ fontSize: "1.3rem" }}>Quick Links</div>
-                <div style={{ display: "flex", flexDirection: "column", gap: ".8em", fontSize: "1.1rem" }}>
-                    <a href="https://tiktok.com/@ambrosica.com">TikTok</a>
-                    <a href="https://instagram.com/ambrosica_official">Instagram</a>
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/refunds">Refund Policy</a>
-                </div>
-            </Page>
+            <Footer />
         </div>
     )
 }

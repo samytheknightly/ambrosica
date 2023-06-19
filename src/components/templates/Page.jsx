@@ -7,7 +7,7 @@ export default function Page({ children, style }) {
 
     return (
         <div style={{
-            paddingInline: "1.6rem",
+            paddingInline: "var(--app-padding)",
             display: "flex",
             flexDirection: "column",
             ...style
