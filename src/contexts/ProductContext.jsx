@@ -10,12 +10,12 @@ export default function ProductProvider({ children }) {
             And since our Reusable Water Balloons are self-sealing using magnets, you can refill them within 1 SECOND!
             Due to their bright color, you're not going to lose them like all the other water balloons; or hold on, we're sorry, you can't refill them anyway 😉.
         `,
-        announcement: "🍉 ENJOY OUR SUMMER SALE WITH 25% OFF 🍉",
+        announcement: "🍉 FREE SHIPPING + 25% OFF TODAY! 🍉",
         reasonsToBuyNow: `
             Tired of constantly having to buy new water balloons because you already used up all of them?\n
             Look no further than the Ambrosica Reusable Water Balloon Set!
         `,
-        // headerImg: "/src/assets/banner.png",
+        headerImg: "/src/assets/banner.png",
         imgs: [
             "https://ae01.alicdn.com/kf/S6ae868069c844eb7ad92a68cfe17909fY.jpg?width=1000&height=1000&hash=2000",
             "https://ae01.alicdn.com/kf/S88b99b97fa144534bf1877d2244b45b5c/12pcs-Reusable-Water-Fighting-Balls-Adults-Kids-Summer-Swimming-Pool-Silicone-Water-Playing-Toys-Pool-Water.jpg_Q90.jpg_.webp",

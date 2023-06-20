@@ -4,10 +4,6 @@
 :root {
   --light-blue: rgb(15, 206, 196);
   --app-padding: 1.6rem;
-
-  @media screen and (min-width: 768px) {
-    --app-padding: 15vw;
-  }
 }
 
 *,

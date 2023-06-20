@@ -4,6 +4,8 @@ import { useContext, useState } from "react"
 
 import { ProductContext } from "../contexts/ProductContext"
 
+import Slider from "react-touch-drag-slider"
+
 import Page from "./templates/Page"
 import Banner from "./Banner"
 import Reviews from "./Reviews"
@@ -26,7 +28,7 @@ export default function LandingPage() {
         <div style={{ display: "flex", flexDirection: "column", marginTop: desktop ? "1em" : "" }}>
             <Banner />
 
-            <Page style={{ flexDirection: desktop ? "row" : "column" }}>
+            <Page style={{ flexDirection: desktop ? "" : "column", gap: desktop ? "2em" : "" }}>
                 {!desktop && <>
                     <div style={{
                         fontSize: "2rem",
@@ -57,12 +59,16 @@ export default function LandingPage() {
                         width: "100%",
                         borderRadius: imgBorderRadius
                     }}>
-                        <img style={{
-                            aspectRatio: "1 / 1",
-                            width: "100%",
-                            objectFit: "cover",
-                            borderRadius: imgBorderRadius
-                        }} src={product.imgs[currImg]} alt="Current Image" />
+                        <img
+                            style={{
+                                aspectRatio: "1 / 1",
+                                width: "100%",
+                                objectFit: "cover",
+                                borderRadius: imgBorderRadius
+                            }}
+                            src={product.imgs[currImg]}
+                            alt="Current Image"
+                        />
                     </div>
                     <div style={{
                         display: "flex",
@@ -78,29 +84,33 @@ export default function LandingPage() {
                                 display: "flex"
                             }}
                         >
-                            <img style={{
-                                height: "100%",
-                                width: "100%",
-                                objectFit: "cover",
-                                borderRadius: imgBorderRadius
-                            }} src={img} alt="Image Preview" />
+                            <img
+                                style={{
+                                    height: "100%",
+                                    width: "100%",
+                                    objectFit: "cover",
+                                    borderRadius: imgBorderRadius
+                                }}
+                                src={img}
+                                alt="Image Preview"
+                            />
                         </button>)}
                     </div>
                 </div>
 
-                <div style={{ display: "flex", flexDirection: "column", padding: desktop ? "2em" : "" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "1em", marginTop: desktop ? "" : "2em" }}>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                    {!desktop && <div style={{ display: "flex", alignItems: "center", gap: "1em", marginTop: desktop ? "" : "2em" }}>
                         {product.features?.map((feature, featureIdx) => <div
                             key={featureIdx}
-                            style={{ display: "flex", alignItems: "center", gap: ".1em", fontWeight: 800 }}
+                            style={{ display: "flex", alignItems: "center", gap: ".1em", fontWeight: 500 }}
                         >
                             <div
                                 className="material-symbols-rounded"
-                                style={{ fontWeight: 800 }}
+                                style={{ fontWeight: "inherit" }}
                             >check</div>
                             {feature}
                         </div>)}
-                    </div>
+                    </div>}
                     {product.reviews?.length && <div style={{
                         marginTop: "1.4em",
                         display: "flex",
@@ -111,12 +121,14 @@ export default function LandingPage() {
                         fontWeight: 500
                     }}>
                         Rating:
+
                         <div style={{ display: "flex", alignItems: "center" }}>
                             {Array(Math.floor(product.reviews.reduce((acc, curr) => acc + curr.rating, 0) / product.reviews.length)).fill().map((_, keyIdx) => <div
                                 key={keyIdx}
                                 className="material-symbols-rounded star"
                                 style={{ fontSize: "1.3em", color: "rgb(230, 165, 0)", fontVariationSettings: "'FILL' 1" }}
                             >star</div>)}
+
                             {!Number.isInteger(product.reviews.reduce((acc, curr) => acc + curr.rating, 0) / product.reviews.length) && <div
                                 className="material-symbols-rounded halfStar"
                                 style={{
@@ -124,57 +136,49 @@ export default function LandingPage() {
                                     color: "rgb(230, 165, 0)"
                                 }}
                             >star_half</div>}
+
                             {Array(Math.floor(5 - product.reviews.reduce((acc, curr) => acc + curr.rating, 0) / product.reviews.length)).fill().map((_, keyIdx) => <div
                                 key={keyIdx}
                                 className="material-symbols-rounded"
                                 style={{ fontSize: "1.3em", color: "rgb(230, 165, 0)", fontVariationSettings: "'FILL' 0" }}
                             >star</div>)}
                         </div>
+
                         ({(product.reviews.reduce((acc, curr) => acc + curr.rating, 0) / product.reviews.length).toFixed(1)})
                     </div>}
+
                     <div style={{
-                        marginTop: ".4em",
-                        fontSize: "1.5rem",
-                        fontWeight: 600
+                        marginTop: desktop ? "1em" : ".4em",
+                        fontSize: desktop ? "2.2rem" : "1.5rem",
+                        fontWeight: 500
                     }}>{product.title}</div>
+
                     <div style={{
-                        marginTop: "1em",
+                        marginTop: desktop ? "1.7em" : "1.1em",
                         display: "flex",
-                        alignItems: "center"
+                        alignItems: "flex-end"
                     }}>
                         <div style={{
-                            fontSize: "1.4rem",
-                            fontWeight: 600,
-                            color: "black"
-                        }}>${(product.price / 100).toFixed(2)}</div>
-                        <div style={{
-                            fontSize: "1.2rem",
+                            fontSize: "1.1rem",
                             fontWeight: 500,
-                            marginLeft: ".3em",
                             color: "rgb(165, 165, 165)",
                             textDecoration: "line-through"
                         }}>${(product.price / 75).toFixed(2)}</div>
+
                         <div style={{
-                            background: "black",
-                            color: "white",
-                            alignItems: "center",
-                            display: "flex",
-                            gap: ".3em",
-                            borderRadius: ".4em",
-                            padding: ".25em .5em",
-                            fontWeight: 900,
-                            fontSize: ".8rem",
-                            marginLeft: ".7em"
-                        }}>
-                            <span
-                                className="material-symbols-rounded"
-                                style={{
-                                    fontWeight: 600,
-                                    fontSize: ".8rem"
-                                }}
-                            >sell</span>
-                            SAVE ${(product.price / 75 - product.price / 100).toFixed(2)}</div>
+                            marginLeft: ".4em",
+                            fontSize: desktop ? "1.3rem" : "1.4rem",
+                            fontWeight: 600,
+                            color: "black"
+                        }}>${(product.price / 100).toFixed(2)}</div>
                     </div>
+
+                    <div style={{
+                        marginTop: ".6em",
+                        fontSize: ".9rem",
+                        color: "rgb(90, 90, 90)"
+                    }}>Shipping included.</div>
+
                     <a
                         href="https://buy.stripe.com/9AQ8yQcWJ5kF15S8wx"
                         style={{
@@ -185,10 +189,11 @@ export default function LandingPage() {
                             justifyContent: "center",
                             alignItems: "center",
                             fontWeight: 600,
-                            padding: "1.2em",
+                            padding: "1.1em",
                             fontSize: "1.1rem",
                             gap: ".4em",
-                            borderRadius: ".4em"
+                            borderRadius: ".4em",
+                            width: desktop ? "80%" : ""
                         }}
                     >
                         <span
@@ -197,20 +202,13 @@ export default function LandingPage() {
                         >shopping_cart</span>
                         Take me to Checkout
                     </a>
-                    <div style={{ fontSize: ".9rem", textAlign: "center", display: "flex", justifyContent: "center", alignItems: "center", marginTop: "1.5em", color: "rgb(120, 120, 120)" }}>
-                        Safe & Secure Checkout Guaranteed
-                        <img
-                            style={{ height: "1.1rem", marginLeft: ".4em" }}
-                            src={poweredByStripe}
-                            alt="Powered by Stripe"
-                        />
-                    </div>
-                    <div style={{ marginTop: "3em", fontSize: "1.2rem", fontWeight: 600 }}>Description</div>
+
                     <div style={{
                         color: "rgb(50, 50, 50)",
-                        marginTop: ".5em",
+                        marginTop: "2.8em",
                         lineHeight: "1.4em"
                     }}>{product.description}</div>
+
                     <div style={{ marginTop: "3em", display: "flex", flexDirection: "column" }}>
                         {product.tabs?.map((tab, tabIdx) => <div
                             key={tab.name}
@@ -236,6 +234,7 @@ export default function LandingPage() {
                             </div>}
                         </div>)}
                     </div>
+
                     {product.gif && <img
                         src={product.gif}
                         style={{
@@ -245,6 +244,7 @@ export default function LandingPage() {
                             objectFit: "cover"
                         }}
                     />}
+
                     <Reviews product={product} />
                 </div>
             </Page>
