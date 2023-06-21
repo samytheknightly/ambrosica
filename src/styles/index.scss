@@ -4,6 +4,10 @@
 :root {
   --light-blue: rgb(15, 206, 196);
   --app-padding: 1.6rem;
+
+  @media screen and (min-width: 768px) {
+    --app-padding: 12vw;
+  }
 }
 
 *,
@@ -25,9 +29,6 @@
 }
 
 .App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   position: relative;
 }
 

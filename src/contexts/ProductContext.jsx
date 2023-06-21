@@ -28,12 +28,8 @@ export default function ProductProvider({ children }) {
         darkMode: false,
         tabs: [
             {
-                name: "Easy Refill",
-                content: "You can easily refill your balloons in less than one second by just dipping them into water and closing them (the seals are magnetic)"
-            },
-            {
                 name: "Shipping",
-                content: "We do not charge our customers for shipping. It'll take us 12 days max. to fulfill your order."
+                content: "We pay for shipping. It'll take us 12 days max. to fulfill your order."
             }
         ],
     }

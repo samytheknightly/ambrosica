@@ -9,10 +9,8 @@ export default function Reviews({ product }) {
             fontSize: "1.8rem",
             marginTop: "5em",
             fontWeight: 600,
-            textAlign: "center"
         }}>Don't just take our word for it</div>
         <div style={{
-            textAlign: "center",
             fontSize: "1.2rem",
             fontWeight: 500,
             marginTop: ".6em",
@@ -50,7 +48,6 @@ export default function Reviews({ product }) {
                     fontSize: "1.1rem",
                     color: "rgb(50, 50, 50)",
                     fontWeight: 600,
-                    textAlign: "center",
                     marginTop: "1em"
                 }}>{review.description}</div>
                 <div style={{

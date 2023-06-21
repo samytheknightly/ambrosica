@@ -69,8 +69,7 @@ export default function Sidebar({ sidebarVisible, setSidebarVisible }) {
                             padding: "1.4rem",
                             borderBottom: "1px solid rgb(200, 200, 200)",
                             fontWeight: 600,
-                            fontSize: "1.2rem",
-                            textAlign: "center"
+                            fontSize: "1.2rem"
                         }}
                     href={link.url}
                 >
