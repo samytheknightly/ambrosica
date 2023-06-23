@@ -91,7 +91,7 @@ export default function ProductPage({ product }) {
             }}>Shipping included.</div>
 
             <Link
-                to="https://buy.stripe.com/8wMbL2e0N7sNeWIfZ0"
+                to="https://buy.stripe.com/dR68yQ8GtcN7cOAaEH"
                 style={{
                     marginTop: "1.4em",
                     background: "var(--light-blue)",
