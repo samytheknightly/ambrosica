@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 import { useMediaQuery } from "../hooks/useMediaQuery"
 
@@ -89,8 +90,8 @@ export default function ProductPage({ product }) {
                 color: "rgb(90, 90, 90)"
             }}>Shipping included.</div>
 
-            <a
-                href="https://buy.stripe.com/9AQ8yQcWJ5kF15S8wx"
+            <Link
+                to="https://buy.stripe.com/9AQ8yQcWJ5kF15S8wx"
                 style={{
                     marginTop: "1.4em",
                     background: "var(--light-blue)",
@@ -110,7 +111,7 @@ export default function ProductPage({ product }) {
                     style={{ fontSize: "1.1em", fontWeight: 600 }}
                 >shopping_cart</span>
                 Take me to Checkout
-            </a>
+            </Link>
 
             <div style={{
                 color: "rgb(50, 50, 50)",

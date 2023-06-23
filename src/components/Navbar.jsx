@@ -1,6 +1,7 @@
 import logo from "../assets/o.png"
 
 import { useContext, useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 import { useScroll } from "../hooks/useScroll"
 import { useMediaQuery } from "../hooks/useMediaQuery"
@@ -36,7 +37,7 @@ export default function Navbar() {
             borderBottom: scroll ? "1px solid var(--light-blue)" : "",
             zIndex: 10
         }}>
-            <a href="/"><img style={{ height: "2.2rem" }} src={logo} alt="Ambrosica Logo" /></a>
+            <Link to="/"><img style={{ height: "2.2rem" }} src={logo} alt="Ambrosica Logo" /></Link>
 
             {!sidebarVisible && !desktop && <button
                 className="material-symbols-rounded"
