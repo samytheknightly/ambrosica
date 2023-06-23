@@ -5,7 +5,7 @@ export const ProductContext = createContext()
 export default function ProductProvider({ children }) {
     const product = {
         name: "Ambrosica",
-        title: "Ambrosica EZ Slicr",
+        title: "Ambrosica™ Facile Slicer",
         description: `
             And since our Reusable Water Balloons are self-sealing using magnets, you can refill them within 1 SECOND!
             Due to their bright color, you're not going to lose them like all the other water balloons; or hold on, we're sorry, you can't refill them anyway 😉.
