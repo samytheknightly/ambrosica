@@ -18,14 +18,12 @@ export default function ProductProvider({ children }) {
         headerImg: "https://s.abcnews.com/images/GMA/hacks0_hpMain_1x1_992.jpg",
         imgs: [
             "https://ae01.alicdn.com/kf/Sadf7b109f1b94f00a103a35531212693r/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp",
-            "https://ae01.alicdn.com/kf/S3f1d76ee389b4a96a02f6b0ee08bb7bet/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp",
-            "https://ae01.alicdn.com/kf/S07759ab16ce341e495aa0c6deb55490bI/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp",
-            "https://ae01.alicdn.com/kf/S6b2f26b5e5a247ec8eab97b7c7127be1Q/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp",
             "https://ae01.alicdn.com/kf/Sb581dfd49da44579a49a2d06cb744eb7I/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp",
-            "https://ae01.alicdn.com/kf/Sf323ec298f3d469596621ac8f9ae2796J/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp"
+            "https://ae01.alicdn.com/kf/S07759ab16ce341e495aa0c6deb55490bI/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp",
+            "https://ae01.alicdn.com/kf/S6b2f26b5e5a247ec8eab97b7c7127be1Q/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp"
         ],
         price: 2999,
-        features: ["Free Shipping", "Effortless Chopping"],
+        features: ["Chopping", "Grinding", "Pressing"],
         darkMode: false,
         tabs: [
             {
