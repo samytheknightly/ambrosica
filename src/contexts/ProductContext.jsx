@@ -6,10 +6,12 @@ export default function ProductProvider({ children }) {
     const product = {
         name: "Ambrosica",
         title: "Ambrosica™ Facile Slicer",
-        reasonsToBuyNow: `
-            Tired of wasting your time chopping, slicing, grinding, or pressing your fruits and veggies by hand?\n
-            Look no further than the ${this.title}!
-        `,
+        get reasonsToBuyNow() {
+            return `
+                Tired of wasting your time chopping, slicing, grinding, or pressing your fruits and veggies by hand?\n
+                Look no further than the ${this.title}!
+            `
+        },
         description: `
             And since our Reusable Water Balloons are self-sealing using magnets, you can refill them within 1 SECOND!
             Due to their bright color, you're not going to lose them like all the other water balloons; or hold on, we're sorry, you can't refill them anyway 😉.
