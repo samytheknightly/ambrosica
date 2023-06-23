@@ -74,7 +74,7 @@ export default function ProductPage({ product }) {
                     fontWeight: 500,
                     color: "rgb(165, 165, 165)",
                     textDecoration: "line-through"
-                }}>${(product.price / 75).toFixed(2)}</div>
+                }}>${(product.price / 50).toFixed(2)}</div>
 
                 <div style={{
                     marginLeft: ".4em",
