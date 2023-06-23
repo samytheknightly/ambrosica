@@ -23,7 +23,7 @@ export default function ProductProvider({ children }) {
             "https://ae01.alicdn.com/kf/S6b2f26b5e5a247ec8eab97b7c7127be1Q/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp"
         ],
         price: 2999,
-        features: ["Chopping", "Grinding", "Pressing"],
+        features: ["Slicing", "Grinding", "Pressing"],
         darkMode: false,
         tabs: [
             {
