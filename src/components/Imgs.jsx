@@ -47,7 +47,7 @@ export default function Imgs() {
                 />
 
                 <button
-                    onClick={() => setCurrImg(prev => prev === 0 ? prev : prev - 1)}
+                    onClick={() => setCurrImg(prev => prev === 0 ? product.imgs.length - 1 : prev - 1)}
                     style={{
                         ...btnStyle,
                         left: 0
@@ -55,7 +55,7 @@ export default function Imgs() {
                 >{"<"}</button>
 
                 <button
-                    onClick={() => setCurrImg(prev => prev === product.imgs.length - 1 ? prev : prev + 1)}
+                    onClick={() => setCurrImg(prev => prev === product.imgs.length - 1 ? 0 : prev + 1)}
                     style={{
                         ...btnStyle,
                         right: 0
@@ -70,8 +70,14 @@ export default function Imgs() {
                     padding: ".6em 1em",
                     background: "rgba(0, 0, 0, .7)",
                     borderRadius: "2em",
-                    color: "white"
-                }}>{currImg + 1}/{product.imgs.length}</div>
+                    color: "white",
+                    display: "flex",
+                    gap: ".2em"
+                }}>
+                    <span>{currImg + 1}</span>
+                    <span>/</span>
+                    <span>{product.imgs.length}</span>
+                </div>
             </div>
             <div style={{
                 display: "flex",
