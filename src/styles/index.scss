@@ -13,6 +13,7 @@
 *,
 *::before,
 *::after {
+  user-select: text;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -40,9 +41,9 @@
   touch-action: pan-y !important;
 }
 
-button,
-select {
+button {
   cursor: pointer;
+  user-select: none;
 }
 
 .star {

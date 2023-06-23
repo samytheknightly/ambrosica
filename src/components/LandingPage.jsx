@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 
 import { ProductContext } from "../contexts/ProductContext"
 
@@ -17,10 +17,13 @@ export default function LandingPage() {
     const product = useContext(ProductContext)
 
     return (
-        <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh", marginTop: desktop ? "1em" : "" }}>
+        <div style={{ display: "flex", flexDirection: "column", marginTop: desktop ? "1em" : "" }}>
             <Banner />
 
-            <Page style={{ flexDirection: desktop ? "" : "column", gap: desktop ? "2em" : "" }}>
+            <Page style={{
+                flexDirection: desktop ? "" : "column",
+                gap: desktop ? "2em" : ""
+            }}>
                 {!desktop && <>
                     <div style={{
                         fontSize: "2rem",
@@ -38,7 +41,7 @@ export default function LandingPage() {
 
                 <Imgs />
 
-                <div style={{ display: "flex", flexDirection: "column" }}>
+                <div style={{ display: "flex", flexDirection: "column", flex: .5 }}>
                     <Product product={product} />
 
                     {product.gif && <img

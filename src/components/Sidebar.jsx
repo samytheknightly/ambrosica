@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { useMediaQuery } from "../hooks/useMediaQuery"
 
 export default function Sidebar({ sidebarVisible, setSidebarVisible }) {
@@ -59,8 +60,9 @@ export default function Sidebar({ sidebarVisible, setSidebarVisible }) {
                 gap: desktop ? "2em" : "",
                 flexDirection: desktop ? "" : "column"
             }}>
-                {links.map((link, linkIdx) => <a
+                {links.map((link, linkIdx) => <Link
                     key={linkIdx}
+                    to={link.url}
                     style={
                         desktop ? {
                             fontWeight: 600,
@@ -71,10 +73,9 @@ export default function Sidebar({ sidebarVisible, setSidebarVisible }) {
                             fontWeight: 600,
                             fontSize: "1.2rem"
                         }}
-                    href={link.url}
                 >
                     {link.name}
-                </a>)}
+                </Link>)}
             </div>
         </div>
     )

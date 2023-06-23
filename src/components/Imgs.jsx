@@ -27,7 +27,7 @@ export default function Imgs() {
             display: "flex",
             flexDirection: "column",
             gap: ".7em",
-            minWidth: desktop ? "50%" : "",
+            flex: desktop ? .6 : "",
             marginTop: desktop ? "" : "3.1em"
         }}>
             <div style={{

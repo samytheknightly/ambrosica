@@ -120,29 +120,36 @@ export default function ProductPage({ product }) {
             }}>{product.description}</div>
 
             <div style={{ marginTop: "3em", display: "flex", flexDirection: "column" }}>
-                {product.tabs?.map((tab, tabIdx) => <div
-                    key={tab.name}
-                    style={{ display: "flex", flexDirection: "column", borderBottom: "1px solid rgb(200, 200, 200)", borderTop: tabIdx === 0 ? "1px solid rgb(200, 200, 200)" : "" }}
-                >
-                    <button
-                        onClick={() => setActiveTabs(prev => ({ ...prev, [tab.name]: !prev[tab.name] }))}
-                        style={{
-                            padding: "1.2rem",
-                            fontSize: "1.2rem",
-                            fontWeight: 600,
-                            display: "flex",
-                            justifyContent: "space-between",
-                            alignItems: "center"
-                        }}
+                <div style={{
+                    fontSize: "1.4rem",
+                    fontWeight: 700
+                }}>FAQs</div>
+
+                <div style={{ marginTop: "2em" }}>
+                    {product.tabs?.map((tab, tabIdx) => <div
+                        key={tab.name}
+                        style={{ display: "flex", flexDirection: "column", borderBottom: "1px solid rgb(200, 200, 200)", borderTop: tabIdx === 0 ? "1px solid rgb(200, 200, 200)" : "" }}
                     >
-                        <div>{tab.name}</div>
-                        <div className="material-symbols-rounded">add</div>
-                    </button>
-                    {activeTabs[tab.name] && <div style={{ display: "flex", gap: "1em", paddingBottom: ".7em" }}>
-                        <div style={{ background: "var(--light-blue)", width: "3px", borderRadius: "2em" }}></div>
-                        <div style={{ paddingBlock: ".7em", flex: 1 }}>{tab.content}</div>
-                    </div>}
-                </div>)}
+                        <button
+                            onClick={() => setActiveTabs(prev => ({ ...prev, [tab.name]: !prev[tab.name] }))}
+                            style={{
+                                padding: "1.2rem",
+                                fontSize: "1.2rem",
+                                fontWeight: 600,
+                                display: "flex",
+                                justifyContent: "space-between",
+                                alignItems: "center"
+                            }}
+                        >
+                            <div>{tab.name}</div>
+                            <div className="material-symbols-rounded">add</div>
+                        </button>
+                        {activeTabs[tab.name] && <div style={{ display: "flex", gap: "1em", paddingBottom: ".7em" }}>
+                            <div style={{ background: "var(--light-blue)", width: "3px", borderRadius: "2em" }}></div>
+                            <div style={{ paddingBlock: ".7em", flex: 1 }}>{tab.content}</div>
+                        </div>}
+                    </div>)}
+                </div>
             </div>
         </div>
     )
