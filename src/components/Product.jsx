@@ -110,7 +110,7 @@ export default function ProductPage({ product }) {
                     className="material-symbols-rounded"
                     style={{ fontSize: "1.1em", fontWeight: 600 }}
                 >shopping_cart</span>
-                Take me to Checkout
+                Buy now!
             </Link>
 
             <div style={{
