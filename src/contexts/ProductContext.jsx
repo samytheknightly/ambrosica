@@ -19,9 +19,10 @@ export default function ProductProvider({ children }) {
         announcement: "🍉 50% OFF + FREE SHIPPING! 🍉",
         headerImg: "https://s.abcnews.com/images/GMA/hacks0_hpMain_1x1_992.jpg",
         imgs: [
-            "https://ae01.alicdn.com/kf/Sadf7b109f1b94f00a103a35531212693r/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp",
+            "https://cdn.shopify.com/s/files/1/0682/6236/3403/products/snapchop.jpg?v=1676902459",
+            "https://cdn.shopify.com/s/files/1/0682/6236/3403/products/chopping.jpg?v=1676902459&width=713",
+            "https://cdn.shopify.com/s/files/1/0682/6236/3403/products/handguard-potato.jpg?v=1676902459&width=713",
             "https://ae01.alicdn.com/kf/Sb581dfd49da44579a49a2d06cb744eb7I/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp",
-            "https://ae01.alicdn.com/kf/S07759ab16ce341e495aa0c6deb55490bI/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp",
             "https://ae01.alicdn.com/kf/S6b2f26b5e5a247ec8eab97b7c7127be1Q/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp"
         ],
         price: 2999,
@@ -30,7 +31,7 @@ export default function ProductProvider({ children }) {
         tabs: [
             {
                 name: "Shipping",
-                content: "We pay for shipping. It'll take us 12 days max. to fulfill your order."
+                content: "We pay for shipping. Expect your package to arrive within maximum 15 days."
             }
         ],
     }
