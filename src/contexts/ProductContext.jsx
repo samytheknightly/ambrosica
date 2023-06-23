@@ -8,7 +8,7 @@ export default function ProductProvider({ children }) {
         title: "Ambrosica™ Facile Slicer",
         get reasonsToBuyNow() {
             return `
-                Tired of wasting your time chopping, slicing, grinding, or pressing your fruits and veggies by hand?\n
+                Tired of wasting your time chopping, slicing, grinding, or pressing your fruits and veggies by hand?
                 Look no further than the ${this.title}!
             `
         },

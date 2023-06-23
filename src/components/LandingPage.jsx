@@ -33,9 +33,7 @@ export default function LandingPage() {
                         color: "rgb(100, 100, 100)",
                         marginTop: ".5em",
                         lineHeight: "1.3em"
-                    }}>{product.reasonsToBuyNow.split('\n').map((i, idx) => {
-                        return <p key={idx}>{i}</p>
-                    })}</div>
+                    }}>{product.reasonsToBuyNow}</div>
                 </>}
 
                 <Imgs />
