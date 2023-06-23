@@ -28,7 +28,7 @@ export default function ProductProvider({ children }) {
             "https://cdn.shopify.com/s/files/1/0682/6236/3403/products/handguard-potato.jpg?v=1676902459&width=713",
             "https://ae01.alicdn.com/kf/Sb581dfd49da44579a49a2d06cb744eb7I/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp"
         ],
-        price: 2999,
+        price: 3499,
         features: ["Slicing", "Grinding", "Pressing"],
         darkMode: false,
         tabs: [
