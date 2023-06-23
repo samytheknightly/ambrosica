@@ -1,9 +1,15 @@
-import banner from "../assets/banner.png"
-
+import { useContext } from "react"
+import { ProductContext } from "../contexts/ProductContext"
 import { useMediaQuery } from "../hooks/useMediaQuery"
 
 export default function Banner() {
+    const product = useContext(ProductContext)
+
     const desktop = useMediaQuery("(min-width: 768px)")
 
-    return !desktop && <img style={{ width: "100%" }} src={banner} alt="sadsd" />
+    return !desktop && <img style={{
+        width: "100%",
+        objectFit: "cover",
+        aspectRatio: "2 / 1"
+    }} src={product.headerImg} alt="sadsd" />
 }

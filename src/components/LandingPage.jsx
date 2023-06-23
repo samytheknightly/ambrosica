@@ -5,7 +5,7 @@ import { ProductContext } from "../contexts/ProductContext"
 import Page from "./templates/Page"
 import Banner from "./Banner"
 import Imgs from "./Imgs"
-import ProductPage from "./ProductPage"
+import Product from "./Product"
 import Reviews from "./Reviews"
 import Footer from "./Footer"
 
@@ -41,7 +41,7 @@ export default function LandingPage() {
                 <Imgs />
 
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                    <ProductPage product={product} />
+                    <Product product={product} />
 
                     {product.gif && <img
                         src={product.gif}
