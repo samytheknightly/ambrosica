@@ -10,7 +10,7 @@ export default function ProductProvider({ children }) {
             And since our Reusable Water Balloons are self-sealing using magnets, you can refill them within 1 SECOND!
             Due to their bright color, you're not going to lose them like all the other water balloons; or hold on, we're sorry, you can't refill them anyway 😉.
         `,
-        announcement: "🍉 FREE SHIPPING + 25% OFF TODAY! 🍉",
+        announcement: "🍉 25% OFF + FREE SHIPPING! 🍉",
         reasonsToBuyNow: `
             Tired of constantly having to buy new water balloons because you already used up all of them?\n
             Look no further than the Ambrosica Reusable Water Balloon Set!
