@@ -6,15 +6,15 @@ export default function ProductProvider({ children }) {
     const product = {
         name: "Ambrosica",
         title: "Ambrosica™ Facile Slicer",
+        reasonsToBuyNow: `
+            Tired of wasting your time chopping, slicing, grinding, or pressing your fruits and veggies by hand?\n
+            Look no further than the ${this.title}!
+        `,
         description: `
             And since our Reusable Water Balloons are self-sealing using magnets, you can refill them within 1 SECOND!
             Due to their bright color, you're not going to lose them like all the other water balloons; or hold on, we're sorry, you can't refill them anyway 😉.
         `,
         announcement: "🍉 25% OFF + FREE SHIPPING! 🍉",
-        reasonsToBuyNow: `
-            Tired of constantly having to buy new water balloons because you already used up all of them?\n
-            Look no further than the Ambrosica Reusable Water Balloon Set!
-        `,
         headerImg: "https://s.abcnews.com/images/GMA/hacks0_hpMain_1x1_992.jpg",
         imgs: [
             "https://ae01.alicdn.com/kf/Sadf7b109f1b94f00a103a35531212693r/13-in-1-Vegetable-Chopper-Multifunctional-Food-Choppers-Onion-Chopper-Vegetable-Slicer-Cutter-Dicer-Veggie-Chopper.jpg_.webp",
