@@ -14,14 +14,6 @@ export default function Sidebar({ sidebarVisible, setSidebarVisible }) {
             url: "/privacy"
         },
         {
-            name: "TikTok",
-            url: "https://tiktok.com/@ambrosica.com"
-        },
-        {
-            name: "Instagram",
-            url: "https://instagram.com/ambrosica_official"
-        },
-        {
             name: "Contact",
             url: "mailto:info@ambrosia.com"
         }

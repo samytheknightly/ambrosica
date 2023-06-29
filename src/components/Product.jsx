@@ -74,7 +74,7 @@ export default function ProductPage({ product }) {
                     fontWeight: 500,
                     color: "rgb(165, 165, 165)",
                     textDecoration: "line-through"
-                }}>${(product.price / 50).toFixed(2)}</div>
+                }}>${(product.price / 70).toFixed(2)}</div>
 
                 <div style={{
                     marginLeft: ".4em",
@@ -91,7 +91,7 @@ export default function ProductPage({ product }) {
             }}>Shipping included.</div>
 
             <Link
-                to="https://buy.stripe.com/dR68yQ8GtcN7cOAaEH"
+                to="https://buy.stripe.com/aEU9CU8Gt6oJcOA5ko"
                 style={{
                     marginTop: "1.4em",
                     background: "var(--light-blue)",
@@ -113,11 +113,18 @@ export default function ProductPage({ product }) {
                 Buy now!
             </Link>
 
-            <div style={{
-                color: "rgb(50, 50, 50)",
-                marginTop: "2.8em",
-                lineHeight: "1.4em"
-            }}>{product.description}</div>
+            <div style={{ marginTop: "2.8em", fontSize: "1.4rem", fontWeight: 500 }}>Description: </div>
+            <div
+                dangerouslySetInnerHTML={{ __html: product.description }}
+                style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    color: "rgb(50, 50, 50)",
+                    gap: ".2em",
+                    marginTop: "1em",
+                    lineHeight: "1.4em"
+                }}
+            ></div>
 
             <div style={{ marginTop: "3em", display: "flex", flexDirection: "column" }}>
                 <div style={{
