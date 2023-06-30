@@ -79,31 +79,39 @@ export default function Imgs() {
                     <span>{product.imgs.length}</span>
                 </div>
             </div>
+
             <div style={{
                 display: "flex",
-                gap: ".6em"
+                flex: 1,
+                overflow: "auto"
             }}>
-                {product.imgs.map((img, imgIdx) => <button
-                    key={imgIdx}
-                    onClick={() => setCurrImg(imgIdx)}
-                    style={{
-                        borderRadius: imgBorderRadius,
-                        width: "5rem",
-                        aspectRatio: "1 / 1",
-                        display: "flex"
-                    }}
-                >
-                    <img
+                <div style={{
+                    display: "flex",
+                    minHeight: "min-content",
+                    gap: ".6em"
+                }}>
+                    {product.imgs.map((img, imgIdx) => <button
+                        key={imgIdx}
+                        onClick={() => setCurrImg(imgIdx)}
                         style={{
-                            height: "100%",
-                            width: "100%",
-                            objectFit: "cover",
-                            borderRadius: imgBorderRadius
+                            borderRadius: imgBorderRadius,
+                            width: "5rem",
+                            aspectRatio: "1 / 1",
+                            display: "flex"
                         }}
-                        src={img}
-                        alt="Image Preview"
-                    />
-                </button>)}
+                    >
+                        <img
+                            style={{
+                                height: "100%",
+                                width: "100%",
+                                objectFit: "cover",
+                                borderRadius: imgBorderRadius
+                            }}
+                            src={img}
+                            alt="Image Preview"
+                        />
+                    </button>)}
+                </div>
             </div>
         </div>
     )

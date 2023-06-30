@@ -5,7 +5,7 @@ export const ProductContext = createContext()
 export default function ProductProvider({ children }) {
     const product = {
         name: "Ambrosica",
-        title: "Ambrosica™ Facile Slicer",
+        title: "Ambrosica™ Baby Budgeteer",
         get reasonsToBuyNow() {
             return `
                 Tired of wasting your time and energy chopping, slicing, grinding, or pressing your fruits and veggies by hand?
@@ -28,10 +28,16 @@ export default function ProductProvider({ children }) {
             </div>
         `,
         announcement: "🔥 SUMMER SALE: 30% OFF + FREE SHIPPING 🔥",
-        headerImg: "https://st3.depositphotos.com/1177973/18401/i/450/depositphotos_184010434-stock-photo-delicious-fruit-salad.jpg",
+        headerImg: ``,
         imgs: [
             "https://cc-west-usa.oss-accelerate.aliyuncs.com/bd71188f-7f5c-441c-90f1-82a3976b624d.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
+            "https://cc-west-usa.oss-accelerate.aliyuncs.com/ffa77db2-7c7b-422f-9e5d-d5d634c4e4ab.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
+            "https://cc-west-usa.oss-accelerate.aliyuncs.com/336593f6-3aed-4eea-b853-349fd0496b21.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
+            "https://cc-west-usa.oss-accelerate.aliyuncs.com/cb3cba10-f7a8-4307-a602-61f422971d5f.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
+            "https://cc-west-usa.oss-accelerate.aliyuncs.com/6567025e-5372-4239-94a6-fa593b990261.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
             "https://cc-west-usa.oss-accelerate.aliyuncs.com/2e4c47b2-1d98-411f-a702-d848ef757de7.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
+            "https://cc-west-usa.oss-accelerate.aliyuncs.com/c8c795fd-d146-45b6-b193-4980cc0b0caf.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
+            "https://cc-west-usa.oss-accelerate.aliyuncs.com/c485df86-0b3e-4d59-90d2-939022140375.jpg?x-oss-process=image/resize,m_pad,w_400,h_400"
 
         ],
         price: 3498,
