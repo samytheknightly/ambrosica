@@ -7,9 +7,8 @@ export default function Banner() {
 
     const desktop = useMediaQuery("(min-width: 768px)")
 
-    return !desktop && <div style={{
+    return !desktop && <img style={{
         width: "100%",
         objectFit: "cover",
-        aspectRatio: "2 / 1"
-    }} dangerouslySetInnerHTML={{ __html: product.headerImg }}></div>
+    }} src={product.headerImg}></img>
 }

@@ -28,7 +28,7 @@ export default function ProductProvider({ children }) {
             </div>
         `,
         announcement: "🔥 SUMMER SALE: 30% OFF + FREE SHIPPING 🔥",
-        headerImg: ``,
+        headerImg: `/src/assets/banner.png`,
         imgs: [
             "https://cc-west-usa.oss-accelerate.aliyuncs.com/336593f6-3aed-4eea-b853-349fd0496b21.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
             "https://cc-west-usa.oss-accelerate.aliyuncs.com/cb3cba10-f7a8-4307-a602-61f422971d5f.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",

@@ -90,28 +90,43 @@ export default function ProductPage({ product }) {
                 color: "rgb(90, 90, 90)"
             }}>Shipping included.</div>
 
-            <Link
-                to="https://buy.stripe.com/aEU9CU8Gt6oJcOA5ko"
-                style={{
-                    marginTop: "1.4em",
-                    background: "var(--light-blue)",
-                    color: "white",
+            <div style={{
+                marginTop: "3em",
+                display: "flex",
+                flexDirection: "column",
+                gap: "1em"
+            }}>
+                <div style={{
                     display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    fontWeight: 600,
-                    padding: "1.1em",
-                    fontSize: "1.1rem",
-                    gap: ".4em",
-                    borderRadius: ".4em"
-                }}
-            >
-                <span
-                    className="material-symbols-rounded"
-                    style={{ fontSize: "1.1em", fontWeight: 600 }}
-                >shopping_cart</span>
-                Buy now!
-            </Link>
+                    flexDirection: "column",
+                    gap: ".6em"
+                }}>
+                    <div style={{ fontSize: "1.2rem", fontWeight: 500 }}>Customization:</div>
+                    <div>Click on the <b>"Buy now!"</b> button below to customize the color of the wallet</div>
+                </div>
+
+                <Link
+                    to="https://buy.stripe.com/aEU9CU8Gt6oJcOA5ko"
+                    style={{
+                        background: "var(--light-blue)",
+                        color: "white",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        fontWeight: 600,
+                        padding: "1.1em",
+                        fontSize: "1.1rem",
+                        gap: ".4em",
+                        borderRadius: ".4em"
+                    }}
+                >
+                    <span
+                        className="material-symbols-rounded"
+                        style={{ fontSize: "1.1em", fontWeight: 600 }}
+                    >shopping_cart</span>
+                    Buy now!
+                </Link>
+            </div>
 
             <div style={{ marginTop: "2.8em", fontSize: "1.4rem", fontWeight: 500 }}>Description: </div>
             <div
