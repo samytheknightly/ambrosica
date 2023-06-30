@@ -9,6 +9,6 @@ export default function Banner() {
 
     return !desktop && <img style={{
         width: "100%",
-        objectFit: "cover",
+        objectFit: "cover"
     }} src={product.headerImg}></img>
 }
