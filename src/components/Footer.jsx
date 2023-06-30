@@ -5,7 +5,7 @@ import Page from "./templates/Page"
 export default function Footer() {
     return (
         <Page style={{ marginTop: "3em", paddingBlock: "2em", background: "black", color: "white", gap: "1.2em" }}>
-            <div style={{ fontSize: "1.3rem" }}>Quick Links</div>
+            <div style={{ fontSize: "1.5rem" }}>Quick Links</div>
             <div style={{ display: "flex", flexDirection: "column", gap: ".8em", fontSize: "1.1rem" }}>
                 <Link to="/privacy">Privacy Policy</Link>
                 <Link to="/refunds">Refund Policy</Link>

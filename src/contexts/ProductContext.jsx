@@ -30,8 +30,6 @@ export default function ProductProvider({ children }) {
         announcement: "🔥 SUMMER SALE: 30% OFF + FREE SHIPPING 🔥",
         headerImg: ``,
         imgs: [
-            "https://cc-west-usa.oss-accelerate.aliyuncs.com/bd71188f-7f5c-441c-90f1-82a3976b624d.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
-            "https://cc-west-usa.oss-accelerate.aliyuncs.com/ffa77db2-7c7b-422f-9e5d-d5d634c4e4ab.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
             "https://cc-west-usa.oss-accelerate.aliyuncs.com/336593f6-3aed-4eea-b853-349fd0496b21.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
             "https://cc-west-usa.oss-accelerate.aliyuncs.com/cb3cba10-f7a8-4307-a602-61f422971d5f.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
             "https://cc-west-usa.oss-accelerate.aliyuncs.com/6567025e-5372-4239-94a6-fa593b990261.jpg?x-oss-process=image/resize,m_pad,w_400,h_400",
@@ -41,16 +39,16 @@ export default function ProductProvider({ children }) {
 
         ],
         price: 3498,
-        features: ["Slicing", "Grinding", "Pressing"],
+        features: ["Effortless", "Trackable", "Effective"],
         darkMode: false,
         tabs: [
             {
                 name: "Shipping",
-                content: "We pay for shipping due to our Summer Sale. Expect your package to arrive within 15 days."
+                content: "We pay for shipping due to our Summer Sale. Expect your package to arrive within 12 days."
             },
             {
                 name: "Refunds",
-                content: "So you're already looking into the refunds section... Fair enough, but make sure to redeem your refund within 15 days after receiving the order."
+                content: "So you're already looking into the refunds section... Fair enough, but make sure to redeem your refund within 2 days after receiving the order."
             }
         ],
     }

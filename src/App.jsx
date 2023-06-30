@@ -22,7 +22,7 @@ function App() {
           path="/refunds"
           element={<Page style={{ display: "", lineHeight: "1.4em" }}>
 
-            So you're already looking into the refunds section... Fair enough, but make sure to redeem your refund within 15 days after receiving the order.
+            So you're already looking into the refunds section... Fair enough, but make sure to redeem your refund within 12 days after receiving the order.
           </Page>}
         />
       </Routes>

@@ -27,7 +27,7 @@ export default function Imgs() {
             display: "flex",
             flexDirection: "column",
             gap: ".7em",
-            flex: desktop ? .6 : "",
+            width: desktop ? "60%" : "",
             marginTop: desktop ? "" : "3.1em"
         }}>
             <div style={{
@@ -82,12 +82,11 @@ export default function Imgs() {
 
             <div style={{
                 display: "flex",
-                flex: 1,
                 overflow: "auto"
             }}>
                 <div style={{
                     display: "flex",
-                    minHeight: "min-content",
+                    height: "min-content",
                     gap: ".6em"
                 }}>
                     {product.imgs.map((img, imgIdx) => <button

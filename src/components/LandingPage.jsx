@@ -29,7 +29,7 @@ export default function LandingPage() {
                         fontSize: "2rem",
                         fontWeight: 600,
                         marginTop: "2em"
-                    }}>Welcome to {product.name}</div>
+                    }}>Welcome to {product.name}!</div>
 
                     <div style={{
                         fontSize: "1.1rem",
@@ -41,7 +41,7 @@ export default function LandingPage() {
 
                 <Imgs />
 
-                <div style={{ display: "flex", flexDirection: "column", flex: .5 }}>
+                <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
                     <Product product={product} />
 
                     {product.gif && <img
