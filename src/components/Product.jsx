@@ -102,7 +102,7 @@ export default function ProductPage({ product }) {
                     gap: ".6em"
                 }}>
                     <div style={{ fontSize: "1.2rem", fontWeight: 500 }}>Customization:</div>
-                    <div>Click on the <span style={{ fontWeight: 600 }}>"Buy now!"</span> button below to customize the color of the wallet</div>
+                    <div>Click on the <span style={{ fontWeight: 600 }}>"Buy now!"</span> button below to customize the color of your wallet!</div>
                 </div>
 
                 <Link
