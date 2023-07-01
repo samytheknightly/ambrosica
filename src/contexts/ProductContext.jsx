@@ -38,7 +38,7 @@ export default function ProductProvider({ children }) {
             "https://cc-west-usa.oss-accelerate.aliyuncs.com/c485df86-0b3e-4d59-90d2-939022140375.jpg?x-oss-process=image/resize,m_pad,w_400,h_400"
 
         ],
-        price: 3498,
+        price: 3998,
         features: ["Effortless", "Trackable", "Effective"],
         darkMode: false,
         tabs: [
