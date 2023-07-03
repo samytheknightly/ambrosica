@@ -94,7 +94,7 @@ export default function Imgs() {
                         onClick={() => setCurrImg(imgIdx)}
                         style={{
                             borderRadius: imgBorderRadius,
-                            width: "5rem",
+                            minHeight: "5rem",
                             aspectRatio: "1 / 1",
                             display: "flex"
                         }}

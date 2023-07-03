@@ -22,7 +22,7 @@ export default function ProductPage({ product }) {
                     {feature}
                 </div>)}
             </div>}
-            {product.reviews?.length && <div style={{
+            {!desktop && product.reviews?.length && <div style={{
                 marginTop: "1.4em",
                 display: "flex",
                 alignItems: "center",
@@ -32,7 +32,7 @@ export default function ProductPage({ product }) {
                 fontWeight: 500,
                 flexWrap: "wrap"
             }}>
-                <div style={{ width: "100%", color: "black", fontWeight: 600, fontSize: "1.04rem" }}>{product.reviews.length} Reviews</div>
+                <div style={{ color: "black", fontWeight: 600, fontSize: "1.05rem" }}>{product.reviews.length} Reviews</div>
 
                 Rating:
 
@@ -66,6 +66,45 @@ export default function ProductPage({ product }) {
                 fontSize: desktop ? "2.2rem" : "1.5rem",
                 fontWeight: 500
             }}>{product.title}</div>
+
+            {desktop && product.reviews?.length && <div style={{
+                marginTop: "1.4em",
+                display: "flex",
+                alignItems: "center",
+                color: "rgb(80, 80, 80)",
+                fontSize: ".95rem",
+                gap: ".3em",
+                fontWeight: 500,
+                flexWrap: "wrap"
+            }}>
+                <div style={{ color: "black", fontWeight: 600, fontSize: "1.05rem", width: "100%" }}>{product.reviews.length} Reviews</div>
+
+                Rating:
+
+                <div style={{ display: "flex", alignItems: "center" }}>
+                    {Array(Math.floor(product.reviews.reduce((acc, curr) => acc + curr.rating, 0) / product.reviews.length)).fill().map((_, keyIdx) => <div
+                        key={keyIdx}
+                        className="material-symbols-rounded star"
+                        style={{ fontSize: "1.3em", color: "rgb(230, 165, 0)", fontVariationSettings: "'FILL' 1" }}
+                    >star</div>)}
+
+                    {!Number.isInteger(product.reviews.reduce((acc, curr) => acc + curr.rating, 0) / product.reviews.length) && <div
+                        className="material-symbols-rounded halfStar"
+                        style={{
+                            fontSize: "1.3em",
+                            color: "rgb(230, 165, 0)"
+                        }}
+                    >star_half</div>}
+
+                    {Array(Math.floor(5 - product.reviews.reduce((acc, curr) => acc + curr.rating, 0) / product.reviews.length)).fill().map((_, keyIdx) => <div
+                        key={keyIdx}
+                        className="material-symbols-rounded"
+                        style={{ fontSize: "1.3em", color: "rgb(230, 165, 0)", fontVariationSettings: "'FILL' 0" }}
+                    >star</div>)}
+                </div>
+
+                ({(product.reviews.reduce((acc, curr) => acc + curr.rating, 0) / product.reviews.length).toFixed(1)})
+            </div>}
 
             <div style={{
                 marginTop: desktop ? "1.7em" : "1.1em",

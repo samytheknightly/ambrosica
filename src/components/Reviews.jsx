@@ -1,9 +1,11 @@
 import Slider from "react-touch-drag-slider"
+import Page from "./templates/Page"
 
 export default function Reviews({ product }) {
-    return product.reviews?.length && <div style={{
+    return product.reviews?.length && <Page style={{
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        width: "100%"
     }}>
         <div style={{
             fontSize: "1.8rem",
@@ -17,8 +19,8 @@ export default function Reviews({ product }) {
             color: "rgb(0, 0, 0)"
         }}>Read from the Buyers!</div>
         <Slider>
-            {product.reviews.map((review, reviewIdx) => (<div
-                key={reviewIdx}
+            {product.reviews.map(review => (<div
+                key={review.title + review.reviewer + review.description}
                 style={{
                     display: "flex",
                     flexDirection: "column",
@@ -76,5 +78,5 @@ export default function Reviews({ product }) {
                 </div>
             </div>))}
         </Slider>
-    </div>
+    </Page>
 }

@@ -41,7 +41,7 @@ export default function LandingPage() {
 
                 <Imgs />
 
-                <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
+                <div style={{ display: "flex", flexDirection: "column" }}>
                     <Product product={product} />
 
                     {product.gif && <img
@@ -53,11 +53,11 @@ export default function LandingPage() {
                             objectFit: "cover"
                         }}
                     />}
-
-                    <Reviews product={product} />
                 </div>
+
             </Page>
 
+            <Reviews product={product} />
             <Footer />
         </div>
     )
