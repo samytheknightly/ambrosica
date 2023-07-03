@@ -29,8 +29,11 @@ export default function ProductPage({ product }) {
                 color: "rgb(80, 80, 80)",
                 fontSize: ".95rem",
                 gap: ".3em",
-                fontWeight: 500
+                fontWeight: 500,
+                flexWrap: "wrap"
             }}>
+                <div style={{ width: "100%", color: "black", fontWeight: 600, fontSize: "1.04rem" }}>{product.reviews.length} Reviews</div>
+
                 Rating:
 
                 <div style={{ display: "flex", alignItems: "center" }}>

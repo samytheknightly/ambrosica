@@ -17,8 +17,8 @@ export default function Reviews({ product }) {
             color: "rgb(0, 0, 0)"
         }}>Read from the Buyers!</div>
         <Slider>
-            {product.reviews.map(review => (<div
-                key={review.reviewer}
+            {product.reviews.map((review, reviewIdx) => (<div
+                key={reviewIdx}
                 style={{
                     display: "flex",
                     flexDirection: "column",
