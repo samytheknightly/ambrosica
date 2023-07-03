@@ -25,7 +25,8 @@ export default function Reviews({ product }) {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    padding: "3em"
+                    padding: "3em",
+                    userSelect: "none !important"
                 }}
             >
                 <div
