@@ -37,6 +37,10 @@
   height: auto !important;
 }
 
+.slide-outer * {
+  user-select: none !important;
+}
+
 .slide-outer {
   touch-action: pan-y !important;
 }
