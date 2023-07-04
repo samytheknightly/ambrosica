@@ -28,7 +28,6 @@ export default function Reviews({ product }) {
                 style={{
                     display: "flex",
                     flexDirection: "column",
-                    alignItems: "center",
                     padding: "3em"
                 }}
             >
@@ -41,7 +40,8 @@ export default function Reviews({ product }) {
                         color: "white",
                         background: "var(--light-blue)",
                         width: "max-content",
-                        borderRadius: ".2em"
+                        borderRadius: ".2em",
+                        alignSelf: "center"
                     }}
                 >format_quote</div>
 
@@ -62,13 +62,11 @@ export default function Reviews({ product }) {
                     fontSize: "1.1rem",
                     marginTop: "5rem",
                     display: "flex",
-                    alignItems: "center",
                     gap: ".3em"
                 }}>
                     ~{review.reviewer}
                     <div style={{
-                        display: "flex",
-                        alignItems: "center"
+                        display: "flex"
                     }}>
                         {Array(review.rating).fill().map((_, keyIdx) => <div
                             key={keyIdx}
@@ -84,7 +82,6 @@ export default function Reviews({ product }) {
         </Slider> : <div style={{
             display: "grid",
             gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-            gridAutoRows: "1fr",
             marginTop: "3em"
         }}>
             {product.reviews.map(review => (<div
@@ -92,7 +89,6 @@ export default function Reviews({ product }) {
                 style={{
                     display: "flex",
                     flexDirection: "column",
-                    alignItems: "center",
                     padding: "3em"
                 }}
             >
@@ -105,7 +101,8 @@ export default function Reviews({ product }) {
                         color: "white",
                         background: "var(--light-blue)",
                         width: "max-content",
-                        borderRadius: ".2em"
+                        borderRadius: ".2em",
+                        alignSelf: "center"
                     }}
                 >format_quote</div>
                 <div style={{
