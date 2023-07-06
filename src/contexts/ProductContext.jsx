@@ -4,6 +4,7 @@ export const ProductContext = createContext()
 
 export default function ProductProvider({ children }) {
     const product = {
+        paymentLink: "https://buy.stripe.com/6oE2as1e1fZj6qcaEJ",
         name: "Ambrosica",
         title: "Ambrosica™ Baby Budgeteer",
         get reasonsToBuyNow() {

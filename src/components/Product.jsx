@@ -148,7 +148,7 @@ export default function ProductPage({ product }) {
                 </div>
 
                 <Link
-                    to="https://buy.stripe.com/6oE2as1e1fZj6qcaEJ"
+                    to={product.paymentLink}
                     style={{
                         background: "var(--light-blue)",
                         color: "white",
