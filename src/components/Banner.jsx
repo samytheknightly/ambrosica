@@ -19,7 +19,7 @@ export default function Banner() {
             }}
         />
 
-        <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
+        {/* <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
             <div></div>
             <Link
                 to="/product"
@@ -30,6 +30,6 @@ export default function Banner() {
 
                 }}
             >Shop now</Link>
-        </div>
+        </div> */}
     </div>
 }
