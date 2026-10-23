@@ -1,17 +1,17 @@
-import { createContext } from "react"
+import { createContext } from "react";
 
-export const ProductContext = createContext()
+export const ProductContext = createContext();
 
 export default function ProductProvider({ children }) {
     const product = {
-        paymentLink: "https://buy.stripe.com/6oE2as1e1fZj6qcaEJ",
+        paymentLink: import.meta.env.VITE_STRIPE_PAYMENT_LINK,
         name: "Ambrosica",
         title: "Ambrosica™ Baby Budgeteer",
         get reasonsToBuyNow() {
             return `
                 Tired of wasting your time and energy chopping, slicing, grinding, or pressing your fruits and veggies by hand?
                 Look no further than the ${this.title}!
-            `
+            `;
         },
         description: `
             <div>Only the best for the moms of this world!</div>
@@ -267,11 +267,11 @@ export default function ProductProvider({ children }) {
                 rating: 5
             }
         ]
-    }
+    };
 
     return (
         <ProductContext.Provider value={product}>
             {children}
         </ProductContext.Provider>
-    )
+    );
 }
